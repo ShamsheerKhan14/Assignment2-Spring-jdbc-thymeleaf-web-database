@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details</title>
+    <style>
+        h1{
+            font-family: "Verdana";
+            font-size: 33px;
+            color: forestgreen;
+        }
+        p{
+            font-size: 18px;
+            color: blue;
+        }
+        span{
+            font-size: 18px;
+            color: purple;
+        }
+        a{
+            font-size: 18px;
+            color: seagreen;
+            text-decoration: none;
+            font-family: "Verdana";
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Details</h1>
+    <p>First Name: <span th:text="${student.firstName}"></span></p>
+    <p>Last Name: <span th:text="${student.lastName}"></span></p>
+    <p>Program: <span th:text="${student.programName}"></span></p>
+    <p>Year: <span th:text="${student.programYear}"></span></p>
+    <p>Co-op: <span th:text="${student.programCoop} == true ? 'Yes' : 'No'"></span></p>
+    <p>Internship: <span th:text="${student.programInternship} == true ? 'Yes' : 'No'"></span></p>
+
+    <a href="/">Index</a>
+    <br><br>
+    <a href="/listStudents">List Students</a>
+</body>
+</html>
